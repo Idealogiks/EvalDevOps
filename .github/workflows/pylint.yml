@@ -1,6 +1,6 @@
-name: Pylint
+name: Python Lint
 
-on:
+on: 
   push:
     branches: [ "main" ]
   pull_request:
@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8, 3.9, 3.10]
+        python-version: ["3.8", "3.9", "3.10"] 
     steps:
-      - name: Check out repository
+      - name: Check out the repository
         uses: actions/checkout@v4
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python
         uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
@@ -25,13 +25,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pylint
-          # Si vous avez un requirements.txt, faites plutôt :
-          # pip install -r requirements.txt
+          # Ou pip install -r requirements.txt si vous avez un requirements.txt
           # pip install pylint
 
       - name: Run pylint
         run: |
-          # Analyse de tous les fichiers .py
           pylint $(find . -type f -name "*.py")
-          # Ou plus simplement :
-          # pylint .
+          # ou
