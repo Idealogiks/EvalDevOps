@@ -35,6 +35,6 @@ Ce dépôt contient un projet Python simple avec :
 # EvalDevOps
 
 [![Tests](https://github.com/Idealogiks/EvalDevOps/actions/workflows/python-app.yml/badge.svg)](https://github.com/Idealogiks/EvalDevOps/actions/workflows/python-app.yml)
-[![Lint](https://github.com/Idealogiks/EvalDevOps/actions/workflows/lint.yml/badge.svg)](https://github.com/Idealogiks/EvalDevOps/actions/workflows/pylint.yml)
+[![Lint](https://github.com/Idealogiks/EvalDevOps/actions/workflows/pylint.yml/badge.svg)](https://github.com/Idealogiks/EvalDevOps/actions/workflows/pylint.yml)
 
 Ce dépôt contient l’exemple d’un test Python [test_app.py](https://github.com/Idealogiks/EvalDevOps/blob/main/test_app.py).
