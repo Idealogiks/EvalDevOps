@@ -29,3 +29,12 @@ Ce dépôt contient un projet Python simple avec :
 7. Rendre le lien de votre répository contenant les github actions que vous aurez implémenté. 
 
 ***Attention à bien mettre votre repository en PUBLIC !***
+
+
+# Réponses : 
+# EvalDevOps
+
+[![Tests](https://github.com/Idealogiks/EvalDevOps/actions/workflows/tests.yml/badge.svg)](https://github.com/Idealogiks/EvalDevOps/actions/workflows/tests.yml)
+[![Lint](https://github.com/Idealogiks/EvalDevOps/actions/workflows/lint.yml/badge.svg)](https://github.com/Idealogiks/EvalDevOps/actions/workflows/lint.yml)
+
+Ce dépôt contient l’exemple d’un test Python [test_app.py](https://github.com/Idealogiks/EvalDevOps/blob/main/test_app.py).
