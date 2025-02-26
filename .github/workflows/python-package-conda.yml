@@ -1,21 +1,19 @@
-name: Python Tests
+name: Python Lint
 
-on:
+on: 
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
 jobs:
-  tests:
+  lint:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        python-version: [3.8, 3.9, 3.10]
-
+        python-version: ["3.8", "3.9", "3.10"] 
     steps:
-      - name: Check out repository
+      - name: Check out the repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -26,12 +24,14 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # Installez ici toutes les dépendances requises par vos tests
-          # Par exemple :
+          # Installez vos dépendances si besoin,
+          # par exemple à partir d'un requirements.txt :
           # pip install -r requirements.txt
-          # pip install pytest
-          pip install pytest
+          # puis installez pylint :
+          pip install pylint
 
-      - name: Run tests
+      - name: Run pylint
         run: |
-          pytest
+          # Analysez tous les fichiers .py du dépôt
+          pylint $(find . -type f -name "*.py")
+          # ou plus simplement : pylint .
